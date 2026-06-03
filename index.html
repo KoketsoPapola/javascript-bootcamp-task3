@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 350px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #4a90e2;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #357ab8;
+        }
+
+        button:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+
+        #resendBtn {
+            width: 350px;
+            margin-top: 15px;
+            background: #28a745;
+        }
+
+        #resendBtn:hover {
+            background: #1e7e34;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Signup Portal</h2>
+
+    <form id="signupForm">
+
+        <label>Username</label>
+        <input type="text" id="username">
+        <span class="error" id="usernameError"></span>
+
+        <label>Email</label>
+        <input type="text" id="email">
+        <span class="error" id="emailError"></span>
+
+        <label>Password</label>
+        <input type="password" id="password">
+        <span class="error" id="passwordError"></span>
+
+        <label>
+            <input type="checkbox" id="terms">
+            Accept Terms and Conditions
+        </label>
+        <span class="error" id="termsError"></span>
+
+        <button type="submit">Sign Up</button>
+
+    </form>
+
+    <button id="resendBtn" disabled>Resend Verification (10)</button>
+
+    <script src="validation.js"></script>
+    <script src="async.js"></script>
+
+</body>
+</html>
